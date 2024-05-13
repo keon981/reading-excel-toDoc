@@ -15,14 +15,14 @@ module.exports = {
     'airbnb-typescript',
   ],
   parserOptions: {
-    ecmaVersion: 'latest',
     parser: '@typescript-eslint/parser',
-    sourceType: 'module',
-    project: ['./tsconfig.json', './tsconfig.node.json'],
+    project: './tsconfig.eslint.json',
     tsconfigRootDir: __dirname,
     ecmaFeatures: {
       jsx: true,
     },
+    ecmaVersion: 'latest',
+    sourceType: 'module',
   },
   overrides: [
     {
@@ -39,7 +39,7 @@ module.exports = {
   ],
   plugins: [
     '@typescript-eslint',
-    'react-refresh',
+    'react',
   ],
   settings: {
     'import/resolver': {
@@ -49,7 +49,7 @@ module.exports = {
       },
     },
   },
-  ignorePatterns: ['.eslintrc.cjs', '*.config.ts', '*/*/setup.ts'],
+  ignorePatterns: ['*.config.ts', '*/*/setup.ts'],
   rules: {
     '@typescript-eslint/semi': ['error', 'never'],
     'import/no-absolute-path': 'off',
