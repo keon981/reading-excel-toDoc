@@ -1,0 +1,18 @@
+/* antd meun item default */
+.ant-menu-dark.ant-menu-inline .ant-menu-item, .ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item {
+  color: var(--gray_1);
+  border-radius: 0;
+}
+/* antd meun item hover */
+.ant-menu-dark:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover, .ant-menu-dark>.ant-menu:not(.ant-menu-horizontal) .ant-menu-item:not(.ant-menu-item-selected):hover {
+  background: var(--gray_2);
+}
+
+/* antd meun item selected */
+.ant-menu-dark .ant-menu-item-selected, .ant-menu-dark>.ant-menu .ant-menu-item-selected {
+  color: var(--white) !important;
+  background-color: transparent !important ;
+  font-size: 14px;
+  font-weight: bold;
+  border-left: 4px solid var(--primary);
+}
