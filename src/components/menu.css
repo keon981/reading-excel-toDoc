@@ -1,6 +1,6 @@
 /* antd meun item default */
 .ant-menu-dark.ant-menu-inline .ant-menu-item, .ant-menu-dark>.ant-menu.ant-menu-inline .ant-menu-item {
-  color: var(--gray_1);
+  color: var(--gray);
   border-radius: 0;
 }
 /* antd meun item hover */
@@ -15,4 +15,39 @@
   font-size: 14px;
   font-weight: bold;
   border-left: 4px solid var(--primary);
+}
+
+/* default antd anchor */
+.ant-anchor-wrapper .ant-anchor .ant-anchor-link {
+  padding: 0;
+  padding-left: 1rem;
+  font-size: 14px;
+  color: var(--gray);
+  line-height: 28px;
+  transition: all 0.16s;
+}
+
+.ant-anchor-wrapper .ant-anchor .ant-anchor-link-title {
+  padding: 5px 0;
+  color: var(--gray);
+}
+
+/* hover antd anchor */
+.ant-anchor-wrapper .ant-anchor .ant-anchor-link:hover {
+  background: var(--gray_2);
+}
+
+/* select antd anchor */
+.ant-anchor-wrapper .ant-anchor .ant-anchor-link-active>.ant-anchor-link-title {
+  color: var(--primary);
+  font-weight: 700;
+}
+
+.ant-anchor-wrapper:not(.ant-anchor-wrapper-horizontal) .ant-anchor .ant-anchor-ink.ant-anchor-ink-visible {
+  background-color: var(--primary);
+  width: 4px;
+}
+
+.ant-anchor-wrapper .ant-anchor {
+  padding-bottom: 24px;
 }

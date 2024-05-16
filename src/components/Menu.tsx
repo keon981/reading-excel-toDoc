@@ -1,27 +1,28 @@
-import { Menu as AntdMenu } from 'antd'
-import './menu.css'
+import { Anchor } from 'antd'
 import type { MenuItems } from 'src/types/menu.type'
+import './menu.css'
 
 type Props = {
   menu: MenuItems
-  selectedKey: string[]
-  onSelect: (key: string) => void
 }
 
-function Menu({ menu, selectedKey, onSelect }: Props) {
+function Menu({ menu }: Props) {
+  const onChange = (link: string) => {
+    const element = document.querySelector(`a.ant-anchor-link-title[href="${link}"]`)
+    if (element) element.scrollIntoView({ block: 'center' })
+  }
+
   return (
     <menu className="directions">
-      <AntdMenu
-        theme="dark"
-        mode="inline"
-        openKeys={menu.defaultOpenKeys}
-        selectedKeys={selectedKey}
-        onSelect={(info) => {
-          onSelect(info.key)
-        }}
-        items={menu.items}
-        style={{ maxWidth: 300, backgroundColor: 'transparent' }}
-      />
+      <nav className="directions-sidebar">
+        <Anchor
+          affix={false}
+          items={menu.items}
+          bounds={96}
+          onChange={onChange}
+          replace
+        />
+      </nav>
     </menu>
   )
 }

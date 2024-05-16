@@ -1,6 +1,6 @@
-import type { ItemType } from 'antd/es/menu/hooks/useItems'
+import { AnchorLinkItemProps } from 'antd/es/anchor/Anchor'
 
 export type MenuItems = {
-  items: ItemType[],
+  items: AnchorLinkItemProps[],
   defaultOpenKeys: string[]
 }
